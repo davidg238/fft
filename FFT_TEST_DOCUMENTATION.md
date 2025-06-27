@@ -27,6 +27,39 @@ The test suite provides thorough validation of the `FastFourierTransform` class,
 ### 3. Basic FFT Properties (`test-basic-fft-properties`)
 - Tests return value consistency (imaginary components)
 - Validates array size preservation
+<<<<<<< Updated upstream
+=======
+root@ffc7c878033b:/app# cat FFT_TEST_DOCUMENTATION.md 
+# FFT Test Suite Documentation
+
+This document describes the comprehensive test suite for the Fast Fourier Transform (FFT) implementation in Toit.
+
+## Overview
+
+The test suite provides thorough validation of the `FastFourierTransform` class, covering:
+- Mathematical correctness
+- Edge cases and error handling
+- Performance characteristics
+- Signal processing properties
+
+## Test Categories
+
+### 1. Constructor Tests (`test-constructor`)
+- Verifies proper initialization of real and imaginary arrays
+- Tests deep copying of input signal (no reference sharing)
+- Validates array sizes match input signal size
+- Confirms imaginary array is initialized to zeros
+
+### 2. Input Validation (`test-power-of-2-validation`)
+- **Valid sizes**: Powers of 2 from 2 to 256 (2, 4, 8, 16, 32, 64, 128, 256)
+- **Invalid sizes**: Non-powers of 2 and sizes < 2 (0, 1, 3, 5, 6, 7, 9, 10, 12, 15, 17, 20, 100)
+- Ensures proper exception throwing for invalid inputs
+- Validates error message: "FFT size must be a power of 2"
+
+### 3. Basic FFT Properties (`test-basic-fft-properties`)
+- Tests return value consistency (imaginary components)
+- Validates array size preservation
+>>>>>>> Stashed changes
 - Confirms repeatability (same input → same output)
 - Tests numerical stability across multiple runs
 
@@ -182,4 +215,8 @@ All FFT tests passed! ✓
 - **Numerical Stability**: Precision across signal types
 - **Memory Usage**: No memory leaks or excessive allocation
 
+<<<<<<< Updated upstream
 This comprehensive test suite ensures the FFT implementation is mathematically correct, numerically stable, and robust for signal processing applications.
+=======
+This comprehensive test suite ensures the FFT implementation is mathematically correct, numerically stable, and robust for signal processing applications.
+>>>>>>> Stashed changes

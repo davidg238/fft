@@ -98,4 +98,8 @@ class FastFourierTransform:
   forward-real-power -> List:
     n := real.size.to-float
     normalization := 2.0 / (n * n)
+<<<<<<< Updated upstream
     return forward-real-power-normalised_ normalization
+=======
+    return forward-real-power-normalised_ normalization
+>>>>>>> Stashed changes

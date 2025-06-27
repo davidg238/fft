@@ -40,7 +40,7 @@ main:
     signal := List isize 0.0
     fsize := isize.to-float
     for i := 0; i < isize ; i++:
-      signal[i] = (cos (twopi * 2.0 * i.to-float / fsize) * 1.00) // + (sin (twopi * 6.0 * i.to-float / fsize) * 0.75)
+      signal[i] = (cos (twopi * 2.0 * i.to-float / fsize) * 1.00) + (sin (twopi * 6.0 * i.to-float / fsize) * 0.75)
 
     graph signal --from=-2.0 --to=2.0 --label="Input signal"
     
