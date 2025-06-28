@@ -487,8 +487,5 @@ test-scaling-properties:
     expect (equals-within-tolerance fft-scaled.real[i] (scale * fft-original.real[i]) tolerance)
     expect (equals-within-tolerance fft-scaled.imag[i] (scale * fft-original.imag[i]) tolerance)
   
-<<<<<<< Updated upstream
+
   print "  Scaling properties tests passed ✓"
-=======
-  print "  Scaling properties tests passed ✓"
->>>>>>> Stashed changes

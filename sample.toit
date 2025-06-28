@@ -42,9 +42,12 @@ main:
     for i := 0; i < isize ; i++:
       signal[i] = (cos (twopi * 2.0 * i.to-float / fsize) * 1.00) + (sin (twopi * 6.0 * i.to-float / fsize) * 0.75)
 
+    print ""
+    print ""
     graph signal --from=-2.0 --to=2.0 --label="Input signal"
     
     processor := FastFourierTransform signal 
-    print "correlated power spectrum:"
+    print ""
+    print ""
 
-    graph processor.forward-real-power[.. isize / 2] --from=0.0 --to=1.2 --label=" \u0192s/N Hz" :: | x l h | x > l
+    graph processor.forward-real-power[.. isize / 2] --from=0.0 --to=1.2 --label="Correlated power spectrum, \u0192s Hz" :: | x l h | x > l
